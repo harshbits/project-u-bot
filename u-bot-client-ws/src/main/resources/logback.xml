@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- configuration file for LogBack (slf4J implementation) See here for more 
+	details: http://gordondickens.com/wordpress/2013/03/27/sawing-through-the-java-loggers/ -->
+<configuration scan="true" scanPeriod="120 seconds" >
+    <property name="LOG_PATH" value="./logs"/>
+    <property name="LOG_FILE_NAME" value="service.log"/>
+    <property name="LOG_FILE" value="${LOG_PATH}/${LOG_FILE_NAME}"/>
+
+	<contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+		<resetJUL>true</resetJUL>
+	</contextListener>
+
+
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%-5relative %-5level %logger{35} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="com.bot" level="INFO" additivity="false">
+		<appender-ref ref="console" />
+	</logger>
+	<logger name="org.springframework.web" level="ERROR" additivity="false">
+		<appender-ref ref="console" />
+	</logger>
+		<logger name="org.springframework.ws" level="INFO" additivity="false">
+		<appender-ref ref="console" />
+	</logger>
+	<logger name="org.hibernate.SQL" level="INFO" additivity="false">
+		<appender-ref ref="console"/>
+	</logger>
+	<root level="INFO">
+		<appender-ref ref="console"/>
+	</root>
+
+
+</configuration>
+	

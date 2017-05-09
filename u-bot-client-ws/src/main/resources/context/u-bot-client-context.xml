@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:int="http://www.springframework.org/schema/integration"
+	xmlns:int-amqp="http://www.springframework.org/schema/integration/amqp"
+	xmlns:rabbit="http://www.springframework.org/schema/rabbit" xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:int-stream="http://www.springframework.org/schema/integration/stream"
+	xmlns:aws-context="http://www.springframework.org/schema/cloud/aws/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/integration/amqp http://www.springframework.org/schema/integration/amqp/spring-integration-amqp.xsd
+		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd
+		http://www.springframework.org/schema/integration/stream http://www.springframework.org/schema/integration/stream/spring-integration-stream.xsd
+		http://www.springframework.org/schema/rabbit http://www.springframework.org/schema/rabbit/spring-rabbit.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- <int:channel id="u-bot-channel" /> -->
+	<int:channel id="u-bot-sync-channel"/>
+	<int:channel id="u-bot-sync-response"/>
+
+	<!-- <int:service-activator input-channel="u-bot-channel"
+		ref="receiveMessageService" method="processCommand" /> -->
+		
+	<!-- <int-amqp:inbound-channel-adapter
+		channel="u-bot-channel" queue-names="${app.properties.uBotQueue}" connection-factory="rabbitConnectionFactory"
+		concurrent-consumers="10" /> -->
+		
+	<int:service-activator input-channel="u-bot-sync-channel" 
+		output-channel="u-bot-sync-response" ref="textResponseClientService" method="getParsedResponse"/>
+
+	<int-amqp:inbound-gateway
+			request-channel="u-bot-sync-channel" 
+			reply-channel="u-bot-sync-response"
+			queue-names="${app.properties.uBotQueue}"  
+			concurrent-consumers="10"
+			connection-factory="rabbitConnectionFactory" />	
+
+</beans>

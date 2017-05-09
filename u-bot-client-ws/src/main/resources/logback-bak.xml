@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- configuration file for LogBack (slf4J implementation) See here for more 
+	details: http://gordondickens.com/wordpress/2013/03/27/sawing-through-the-java-loggers/ -->
+<configuration scan="true" scanPeriod="120 seconds" >
+    <property name="LOG_PATH" value="./logs"/>
+    <property name="LOG_FILE_NAME" value="service.log"/>
+    <property name="LOG_FILE" value="${LOG_PATH}/${LOG_FILE_NAME}"/>
+
+	<contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+		<resetJUL>true</resetJUL>
+	</contextListener>
+	<appender name="FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>./logs/${LOG_FILE_NAME}</file>
+		<maxHistory>30</maxHistory>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>
+				[%d{yyyy-MM-dd HH:mm:ss.SSS}][%level][correlationId=%X{correlationId}][site=%X{site}][language=%X{language}][%X{userIdAndType}][eventId=%X{eventId}][%logger{36} - %msg]%n
+			</pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>./logs/archive/${LOG_FILE_NAME}.%d.%i</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+                class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <!-- or whenever the file size reaches 50MB -->
+                <maxFileSize>50MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+	</appender>
+	<!-- configure packages here with required levels -->
+	<logger name="org.hibernate.SQL" level="debug" />
+	<root level="info">
+		<appender-ref ref="FILE" />
+	</root>
+</configuration>
+	
