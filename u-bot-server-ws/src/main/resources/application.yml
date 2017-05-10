@@ -28,10 +28,10 @@ spring:
 #    virtual-host: /  
 
   rabbitmq: 
-    addresses: clam.rmq.cloudamqp.com
-    username: oayqpgfa
-    password: DpC_x7SJH7-U0DbrZ8BWBcncmNLwHT9R
-    virtual-host: oayqpgfa
+    addresses: <address>
+    username: <username>
+    password: <password>
+    virtual-host: <v-host>
   
 #  redis:
 #    host: localhost
@@ -39,9 +39,9 @@ spring:
 #    database: 0
     
   redis:
-    host: redis-17393.c12.us-east-1-4.ec2.cloud.redislabs.com
-    port: 17393
-    password: aQmmc5nwmffRF8wW
+    host: <host>
+    port: <port>
+    password: <password>
     database: 0
  
 logging:
@@ -53,8 +53,8 @@ logging:
 app:
   properties:
     twilioUrl: url
-    accountSid: AC76af38cf591d437e45d5fd7b246f9d83
-    authToken: c92e3eec1a6f8137aab6216b7a2b0bdd
+    accountSid: <account-sid>
+    authToken: <auth-token>
     chatExchangeName: ubot.server.exchange
     oAuth2Scopes:
       - https://www.googleapis.com/auth/cse
