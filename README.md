@@ -3,7 +3,7 @@
 
 
 
-Home Automation project which involves server application and client application (to be installed in hardware device).
+Home Automation/Personal Assistant project which involves server application and client application (to be installed in hardware device).
 
 ### Maven
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.rabbitmq/amqp-client/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.rabbitmq/amqp-client)
