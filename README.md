@@ -1,4 +1,4 @@
-# Project U-Bot &middot; [![spring boot](http://spring.io/img/favicon-ca31b78daf0dd9a106bbf3c6d87d4ec7.png)](http://spring.io/) [![Redis](https://redis.io/images/favicon.png)](http://redis.io/) [![Rabbit MQ](https://www.rabbitmq.com/favicon.ico)](https://www.rabbitmq.com/)
+# Project U-Bot &middot; #### developed in [![spring boot](http://spring.io/img/favicon-ca31b78daf0dd9a106bbf3c6d87d4ec7.png)](http://spring.io/)
 
 
 
