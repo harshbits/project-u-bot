@@ -43,6 +43,6 @@ Hardware Dependencies:
 ### Raspberry Pi
 * [![raspberry-pi-3-model-b](https://www.raspberrypi.org/app/themes/mind-control/images/favicon.png) Raspberry Pi 3 model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) - As CPU for home computing system
   * It is Highly recommonded model for best performance.
-  * For testing, you can also use [Raspberry Pi Zero W](https://www.raspberrypi.org/products/pi-zero-w/), but not for working model.
+  * For development/testing, you can also use [Raspberry Pi Zero W](https://www.raspberrypi.org/products/pi-zero-w/), but not for working model.
 
 
