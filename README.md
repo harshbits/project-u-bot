@@ -12,8 +12,14 @@ Home Automation/Personal Assistant project which involves server application and
 Software Dependencies:
 ----------------------
 
-### Cloud Services
+### Cloud Services (Premium Subscription) 
 
+* [Google Cloud](https://cloud.google.com/speech/) - Speech to Text API 
+* [AWS-Polly](https://aws.amazon.com/polly/) - Text to Speech (Sound like a Human voice)
+
+### Cloud Services dependency 
+
+* [![Rabbit MQ](https://www.rabbitmq.com/favicon.ico) RabbitMQ](https://www.rabbitmq.com/) - As AMQP protocol provider for messanging betweeen server and client application
 * [![Redis](https://redis.io/images/favicon.png) Redis](http://redis.io/) - To store and retrieve real time data
 
 
