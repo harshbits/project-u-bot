@@ -1,4 +1,4 @@
-# Project U-Bot &middot; #### developed in [![spring boot](http://spring.io/img/favicon-ca31b78daf0dd9a106bbf3c6d87d4ec7.png)](http://spring.io/)
+# Project U-Bot &middot; [![spring boot](http://spring.io/img/favicon-ca31b78daf0dd9a106bbf3c6d87d4ec7.png)](http://spring.io/)
 
 
 
