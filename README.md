@@ -1,7 +1,7 @@
 # Project U-Bot &middot; [![spring boot](http://spring.io/img/favicon-ca31b78daf0dd9a106bbf3c6d87d4ec7.png)](http://spring.io/)
 
 
-Home Automation/Personal Assistant project which involves server application and client application (to be installed in hardware device).
+The Home Computing System (Intelligent Auto-bot) project developed in Spring Boot
 
 ### Maven
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.rabbitmq/amqp-client/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.rabbitmq/amqp-client)
