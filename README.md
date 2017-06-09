@@ -1,8 +1,6 @@
 # Project U-Bot &middot; [![spring boot](http://spring.io/img/favicon-ca31b78daf0dd9a106bbf3c6d87d4ec7.png)](http://spring.io/)
 
 
-
-
 Home Automation/Personal Assistant project which involves server application and client application (to be installed in hardware device).
 
 ### Maven
@@ -40,7 +38,7 @@ Software Dependencies:
 
 Hardware Dependencies:
 ----------------------
-### Raspberry Pi
+### Raspberry Pi [![raspberry-pi-3-model-b](https://www.raspberrypi.org/app/themes/mind-control/images/favicon.png)]()
 * [![raspberry-pi-3-model-b](https://www.raspberrypi.org/app/themes/mind-control/images/favicon.png) Raspberry Pi 3 model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) - As CPU for home computing system
   * It is Highly recommonded model for best performance.
   * For development/testing, you can also use [Raspberry Pi Zero W](https://www.raspberrypi.org/products/pi-zero-w/), but not for working model.
