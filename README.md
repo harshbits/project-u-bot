@@ -15,9 +15,11 @@ Software Dependencies:
 ### Cloud Services (With Premium Subscription) 
 
 * [Google Cloud](https://cloud.google.com/speech/) - Speech to Text API 
+  * **Documentation**
+  * **Usage**
 * [AWS-Polly](https://aws.amazon.com/polly/) - Text to Speech (Sound like a Human voice)
- * **Documentation**
- * **Usage**
+  * **Documentation**
+  * **Usage**
 * [Twilio-sms](https://www.twilio.com/docs/api?filter-product=sms) - To control system using text messages and get status/update about the system
   * **Documentation**
   * **Usage**
