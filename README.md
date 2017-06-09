@@ -14,7 +14,7 @@ Software Dependencies:
 
 ### Cloud Services (With Premium Subscription) 
 
-* [Google Cloud](https://cloud.google.com/speech/) - Speech to Text API 
+* <img src="https://cloud.google.com/_static/aab308d0ac/images/cloud/icons/favicons/favicon.ico" height="18"> [Google Cloud](https://cloud.google.com/speech/) - Speech to Text API 
   * **Documentation**
   * **Usage**
 * [![AWS-Polly](https://a0.awsstatic.com/main/images/site/favicon.ico) AWS-Polly](https://aws.amazon.com/polly/) - Text to Speech (Sound like a Human voice)
