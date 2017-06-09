@@ -14,7 +14,8 @@ Software Dependencies:
 
 ### Cloud Services
 
-* [![Redis](https://redis.io/images/favicon.png) Redis](http://redis.io/)
+* [![Redis](https://redis.io/images/favicon.png) Redis](http://redis.io/) - To store and retrieve real time data
+
 
 Hardware Dependencies:
 ----------------------
