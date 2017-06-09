@@ -9,3 +9,12 @@ Home Automation/Personal Assistant project which involves server application and
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.rabbitmq/amqp-client/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.rabbitmq/amqp-client)
 
 
+Software Dependencies:
+----------------------
+
+### Cloud Services
+
+
+Hardware Dependencies:
+----------------------
+
