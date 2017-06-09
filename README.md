@@ -40,4 +40,7 @@ Software Dependencies:
 
 Hardware Dependencies:
 ----------------------
+### Raspberry Pi
+* [![Rabbit MQ](https://www.raspberrypi.org/app/themes/mind-control/images/favicon.png) Raspberry Pi 3 model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) - As CPU for home computing system
+
 
