@@ -16,8 +16,12 @@ Software Dependencies:
 
 * [Google Cloud](https://cloud.google.com/speech/) - Speech to Text API 
 * [AWS-Polly](https://aws.amazon.com/polly/) - Text to Speech (Sound like a Human voice)
+ * **Documentation**
+ * **Usage**
 * [Twilio-sms](https://www.twilio.com/docs/api?filter-product=sms) - To control system using text messages and get status/update about the system
-  * Documentation
+  * **Documentation**
+  * **Usage**
+  
 ### Cloud Services (No Premium Subscription required) 
 
 * [![Rabbit MQ](https://www.rabbitmq.com/favicon.ico) RabbitMQ](https://www.rabbitmq.com/) - As AMQP protocol provider for messanging betweeen server and client application
