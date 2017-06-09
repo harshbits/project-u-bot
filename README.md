@@ -49,3 +49,7 @@ Hardware Dependencies:
 * [PlayStation Eye by Sony](https://www.amazon.com/gp/product/B000VTQ3LU/ref=oh_aui_detailpage_o06_s00?ie=UTF8&psc=1)
   * It works best with Raspberry Pi 3 with noise cancellation
 
+### Speaker (Bluetooth + AUX)
+* [JBL Flip 3](https://www.jbl.com/bluetooth-speakers/JBL+FLIP+III.html)
+  * Note: It turned out to be cheap and best with AUX cable support
+  
