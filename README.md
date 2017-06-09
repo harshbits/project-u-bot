@@ -17,10 +17,10 @@ Software Dependencies:
 * [Google Cloud](https://cloud.google.com/speech/) - Speech to Text API 
   * **Documentation**
   * **Usage**
-* [AWS-Polly](https://aws.amazon.com/polly/) - Text to Speech (Sound like a Human voice)
+* [![AWS-Polly](https://a0.awsstatic.com/main/images/site/favicon.ico) AWS-Polly](https://aws.amazon.com/polly/) - Text to Speech (Sound like a Human voice)
   * **Documentation**
   * **Usage**
-* <img src="https://www.twilio.com/docs/static/img/favicons/favicon_57.98200b6899e6.png" height="18">[Twilio-sms](https://www.twilio.com/docs/api?filter-product=sms) - To control system using text messages and get status/update about the system
+* <img src="https://www.twilio.com/docs/static/img/favicons/favicon_57.98200b6899e6.png" height="18"> [Twilio-sms](https://www.twilio.com/docs/api?filter-product=sms) - To control system using text messages and get status/update about the system
   * **Documentation**
   * **Usage**
   
