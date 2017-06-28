@@ -2,76 +2,66 @@
 package com.bot.chat.ws.beans.support;
 
 import java.io.Serializable;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Metadata implements Serializable
-{
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
-    @SerializedName("intentId")
-    @Expose
-    private String intentId;
-    @SerializedName("webhookUsed")
-    @Expose
-    private String webhookUsed;
-    @SerializedName("webhookForSlotFillingUsed")
-    @Expose
-    private String webhookForSlotFillingUsed;
-    @SerializedName("intentName")
-    @Expose
-    private String intentName;
-    private final static long serialVersionUID = 1L;
+@Builder
+@Data
+@EqualsAndHashCode(callSuper = false)
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+@JsonInclude(Include.NON_NULL)
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Metadata implements Serializable {
 
-    public String getIntentId() {
-        return intentId;
-    }
+	private final static long serialVersionUID = 1L;
 
-    public void setIntentId(String intentId) {
-        this.intentId = intentId;
-    }
+	@SerializedName("intentId")
+	@Expose
+	private String intentId;
 
-    public Metadata withIntentId(String intentId) {
-        this.intentId = intentId;
-        return this;
-    }
+	@SerializedName("webhookUsed")
+	@Expose
+	private String webhookUsed;
 
-    public String getWebhookUsed() {
-        return webhookUsed;
-    }
+	@SerializedName("webhookForSlotFillingUsed")
+	@Expose
+	private String webhookForSlotFillingUsed;
 
-    public void setWebhookUsed(String webhookUsed) {
-        this.webhookUsed = webhookUsed;
-    }
+	@SerializedName("intentName")
+	@Expose
+	private String intentName;
 
-    public Metadata withWebhookUsed(String webhookUsed) {
-        this.webhookUsed = webhookUsed;
-        return this;
-    }
+	public Metadata withIntentId(String intentId) {
+		this.intentId = intentId;
+		return this;
+	}
 
-    public String getWebhookForSlotFillingUsed() {
-        return webhookForSlotFillingUsed;
-    }
+	public Metadata withWebhookUsed(String webhookUsed) {
+		this.webhookUsed = webhookUsed;
+		return this;
+	}
 
-    public void setWebhookForSlotFillingUsed(String webhookForSlotFillingUsed) {
-        this.webhookForSlotFillingUsed = webhookForSlotFillingUsed;
-    }
+	public Metadata withWebhookForSlotFillingUsed(String webhookForSlotFillingUsed) {
+		this.webhookForSlotFillingUsed = webhookForSlotFillingUsed;
+		return this;
+	}
 
-    public Metadata withWebhookForSlotFillingUsed(String webhookForSlotFillingUsed) {
-        this.webhookForSlotFillingUsed = webhookForSlotFillingUsed;
-        return this;
-    }
-
-    public String getIntentName() {
-        return intentName;
-    }
-
-    public void setIntentName(String intentName) {
-        this.intentName = intentName;
-    }
-
-    public Metadata withIntentName(String intentName) {
-        this.intentName = intentName;
-        return this;
-    }
+	public Metadata withIntentName(String intentName) {
+		this.intentName = intentName;
+		return this;
+	}
 
 }

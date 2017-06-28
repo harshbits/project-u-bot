@@ -2,44 +2,48 @@
 package com.bot.chat.ws.beans.support;
 
 import java.io.Serializable;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Status implements Serializable
-{
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
-    @SerializedName("code")
-    @Expose
-    private long code;
-    @SerializedName("errorType")
-    @Expose
-    private String errorType;
-    private final static long serialVersionUID = 1L;
+@Builder
+@Data
+@EqualsAndHashCode(callSuper = false)
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+@JsonInclude(Include.NON_NULL)
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Status implements Serializable {
+	
+	private final static long serialVersionUID = 1L;
 
-    public long getCode() {
-        return code;
-    }
+	@SerializedName("code")
+	@Expose
+	private long code;
 
-    public void setCode(long code) {
-        this.code = code;
-    }
+	@SerializedName("errorType")
+	@Expose
+	private String errorType;
 
-    public Status withCode(long code) {
-        this.code = code;
-        return this;
-    }
+	public Status withCode(long code) {
+		this.code = code;
+		return this;
+	}
 
-    public String getErrorType() {
-        return errorType;
-    }
-
-    public void setErrorType(String errorType) {
-        this.errorType = errorType;
-    }
-
-    public Status withErrorType(String errorType) {
-        this.errorType = errorType;
-        return this;
-    }
+	public Status withErrorType(String errorType) {
+		this.errorType = errorType;
+		return this;
+	}
 
 }
