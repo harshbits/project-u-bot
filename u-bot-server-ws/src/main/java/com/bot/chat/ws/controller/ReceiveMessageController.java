@@ -7,13 +7,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.bot.chat.ws.config.AppProperties;
 import com.twilio.twiml.Body;
@@ -39,7 +35,6 @@ public class ReceiveMessageController {
 		HashMap<String, String> callers = new HashMap<>();
 		callers.put("+14694070782", "Harsh Bhavsar");
 		callers.put("+12672403339", "vaish\"U\"");
-		callers.put("+15109355258", "Mittal Patel");
 
 		String fromNumber = request.getParameter("From");
 		String data = request.getParameter("Body");
@@ -69,12 +64,6 @@ public class ReceiveMessageController {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}
-
-	@ResponseBody
-	@ExceptionHandler(Exception.class)
-	public ResponseEntity<?> hadnleException(Exception e) {
-		return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
 	}
 
 }

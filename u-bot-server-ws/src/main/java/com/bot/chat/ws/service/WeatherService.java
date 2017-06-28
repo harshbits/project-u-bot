@@ -50,6 +50,13 @@ public class WeatherService{
 		
 	}
 	
+	/**
+	 * Get temperature for the particular location in requested unit (C or F) format
+	 *  
+	 * @param location
+	 * @param unit
+	 * @return
+	 */
 	public String getTemperature(String location, DegreeUnit unit) {
 
 		String output = "";
@@ -66,7 +73,7 @@ public class WeatherService{
 					+ unitValue.toLowerCase();
 			
 		} catch (JAXBException | IOException e) {
-			log.error("Error ", e);
+			log.error("Error ", e.getMessage());
 		}
 		
 		return output;
