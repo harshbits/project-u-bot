@@ -5,8 +5,6 @@ import java.util.HashMap;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,16 +16,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.bot.chat.ws.config.AppProperties;
-import com.rabbitmq.client.AMQP;
 import com.twilio.twiml.Body;
 import com.twilio.twiml.Message;
 import com.twilio.twiml.MessagingResponse;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Controller
 @RequestMapping("/sms")
+@Slf4j
 public class ReceiveMessageController {
-	
-	private static final Logger logger = LoggerFactory.getLogger(ReceiveMessageController.class);
 	
 	@Autowired
 	private RabbitTemplate rabbitTemplate;
@@ -54,7 +52,7 @@ public class ReceiveMessageController {
 		
 		String rabbitResponse = (String) rabbitTemplate.convertSendAndReceive(properties.getChatExchangeName(), "ubot-queue", data);
 		
-		logger.info("Rabbit Response: {}", rabbitResponse);
+		log.info("Rabbit Response: {}", rabbitResponse);
 
 		if(rabbitResponse == null){
 			rabbitResponse = "Sorry what was that again?";

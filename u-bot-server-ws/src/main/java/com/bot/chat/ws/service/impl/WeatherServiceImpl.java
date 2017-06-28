@@ -5,8 +5,6 @@ import java.lang.reflect.Type;
 
 import javax.xml.bind.JAXBException;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.bot.chat.ws.beans.WebhookRequest;
@@ -18,13 +16,13 @@ import com.google.gson.Gson;
 import com.google.gson.internal.LinkedTreeMap;
 import com.google.gson.reflect.TypeToken;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class WeatherServiceImpl implements WeatherService {
 
-	private static final Logger logger = LoggerFactory.getLogger(WeatherServiceImpl.class);
-	
 	@Autowired
 	private  YahooWeatherService yahooWeatherService;
-	
 
 	@Override
 	public String handleRequest(WebhookRequest request) {
@@ -45,7 +43,7 @@ public class WeatherServiceImpl implements WeatherService {
 				}
 			}
 		}catch(Exception e){
-			logger.error("{}", e);
+			log.error("{}", e);
 		}
 	
 		return getTemperature(location, DegreeUnit.CELSIUS);
@@ -69,7 +67,7 @@ public class WeatherServiceImpl implements WeatherService {
 					+ unitValue.toLowerCase();
 			
 		} catch (JAXBException | IOException e) {
-			logger.error("Error ", e);
+			log.error("Error ", e);
 		}
 		
 		return output;

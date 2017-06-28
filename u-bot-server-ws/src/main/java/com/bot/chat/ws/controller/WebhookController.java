@@ -1,7 +1,5 @@
 package com.bot.chat.ws.controller;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -18,11 +16,12 @@ import com.bot.chat.ws.beans.WebhookResponse;
 import com.bot.chat.ws.service.GoogleSearchService;
 import com.bot.chat.ws.service.WeatherService;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Controller
 @RequestMapping("/webhook")
+@Slf4j
 public class WebhookController {
-	
-	private static final Logger logger = LoggerFactory.getLogger(WebhookController.class);
 	
 	@Autowired
 	private WeatherService weatherService;
@@ -55,7 +54,7 @@ public class WebhookController {
 		
 		String action = request.getResult().getAction().toString();
 		
-		logger.info("Action: "+ action);
+		log.info("Action: "+ action);
 		String responseString = "";
 		switch(action){
 			case "weather":
@@ -65,7 +64,7 @@ public class WebhookController {
 				responseString = googleSearchService.handleRequest(request);
 				break;
 		}
-		logger.info("Speech Text {}", responseString);
+		log.info("Speech Text {}", responseString);
 		response.setSpeech(responseString);
 		response.setDisplayText("Action triggered: "+ action);
 	}
