@@ -3,14 +3,14 @@
 
 The Home Computing System (Intelligent Auto-bot) project developed in Spring Boot
 
-### Maven
+#### Maven
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.rabbitmq/amqp-client/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.rabbitmq/amqp-client)
 
 
 Software Dependencies:
 ----------------------
 
-### Cloud Services (With Premium Subscription) 
+#### Cloud Services (With Premium Subscription) 
 
 * <img src="https://cloud.google.com/_static/aab308d0ac/images/cloud/icons/favicons/favicon.ico" height="18"> [Google Cloud](https://cloud.google.com/speech/) - Speech to Text API 
   * **Documentation**
