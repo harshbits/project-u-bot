@@ -7,7 +7,19 @@ The Home Computing System (Intelligent Auto-bot) project developed in Spring Boo
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.rabbitmq/amqp-client/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.rabbitmq/amqp-client)
 
 
-Software Dependencies:
+Prerequisites
+-------------
+In order to start work with project, make sure you have configured IDE/System with prerequisites steps.
+
+### Java Version
+* Java SE Development Kit 8 (JDK 8) 
+
+### Lombok
+* Install Lombok for your IDE (i.e. STS or Eclipse)
+* Version to install: `1.16.16`
+* Installation Guide: [Please refer this link](http://codeomitted.com/setup-lombok-with-stseclipse-based-ide/)
+
+Software Dependencies
 ----------------------
 
 #### Cloud Services (With Premium Subscription) 
@@ -36,7 +48,7 @@ Software Dependencies:
 * [![Redis](https://redis.io/images/favicon.png) Redis](http://redis.io/) - To store and retrieve real time data
 
 
-Hardware Dependencies:
+Hardware Dependencies
 ----------------------
 #### Raspberry Pi [![raspberry-pi-3-model-b](https://www.raspberrypi.org/app/themes/mind-control/images/favicon.png)]()
 * [Raspberry Pi 3 model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) - As CPU for home computing system
