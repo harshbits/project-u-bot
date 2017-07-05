@@ -23,9 +23,6 @@ import lombok.ToString;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class SenderData implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1877226546839516779L;
 
 	private User sender;

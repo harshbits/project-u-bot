@@ -6,6 +6,12 @@ import org.springframework.stereotype.Service;
 import com.bot.chat.ws.beans.WebhookRequest;
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
 
+/**
+ * Google custom search service
+ * 
+ * @author harshbhavsar
+ *
+ */
 @Service
 public class GoogleSearchService{
 	

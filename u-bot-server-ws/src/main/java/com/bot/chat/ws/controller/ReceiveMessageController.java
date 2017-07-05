@@ -7,18 +7,24 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
-import com.bot.chat.ws.config.AppProperties;
+import com.bot.chat.ws.config.AppProperties.Properties;
 import com.twilio.twiml.Body;
 import com.twilio.twiml.Message;
 import com.twilio.twiml.MessagingResponse;
 
 import lombok.extern.slf4j.Slf4j;
 
-@Controller
+/**
+ * This controller receive messages (sms) from user and handles request.
+ * 
+ * @author harshbhavsar
+ *
+ */
+@RestController
 @RequestMapping("/sms")
 @Slf4j
 public class ReceiveMessageController {
@@ -27,9 +33,9 @@ public class ReceiveMessageController {
 	private RabbitTemplate rabbitTemplate;
 	
 	@Autowired
-	private AppProperties properties;
+	private Properties properties;
 
-	@RequestMapping(method = { RequestMethod.GET })
+	@RequestMapping(method = RequestMethod.GET , headers = "Accept=application/json")
 	public void service(HttpServletRequest request, HttpServletResponse response) {
 
 		HashMap<String, String> callers = new HashMap<>();
@@ -62,7 +68,7 @@ public class ReceiveMessageController {
 
 			response.getWriter().print(twiml.toXml());
 		} catch (Exception e) {
-			e.printStackTrace();
+			log.error("Error while sending message {}", e);
 		}
 	}
 

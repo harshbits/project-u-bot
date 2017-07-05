@@ -33,18 +33,23 @@ public class WebhookRequest implements Serializable {
 	@SerializedName("id")
 	@Expose
 	private String id;
+	
 	@SerializedName("timestamp")
 	@Expose
 	private String timestamp;
+	
 	@SerializedName("lang")
 	@Expose
 	private String lang;
+	
 	@SerializedName("result")
 	@Expose
 	private Result result;
+	
 	@SerializedName("status")
 	@Expose
 	private Status status;
+	
 	@SerializedName("sessionId")
 	@Expose
 	private String sessionId;

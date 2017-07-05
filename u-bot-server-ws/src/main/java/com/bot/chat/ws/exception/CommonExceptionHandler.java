@@ -11,6 +11,11 @@ import com.bot.chat.ws.beans.ErrorObject;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * @author harshbhavsar
+ *
+ */
 @ControllerAdvice
 @Slf4j
 public class CommonExceptionHandler {
@@ -28,7 +33,6 @@ public class CommonExceptionHandler {
 		log.error("Error occured {}", e.getMessage());
 		return new ResponseEntity<ErrorObject>(new ErrorObject(HttpStatus.INTERNAL_SERVER_ERROR.toString(), e.getMessage()),
 				HttpStatus.INTERNAL_SERVER_ERROR);
-	
 	}
 	
 }

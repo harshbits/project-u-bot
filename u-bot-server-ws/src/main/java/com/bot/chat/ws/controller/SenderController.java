@@ -6,26 +6,29 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.bot.chat.ws.beans.ErrorObject;
 import com.bot.chat.ws.beans.SenderData;
 import com.bot.chat.ws.beans.User;
 import com.bot.chat.ws.service.SendDataService;
 
-@Controller
+/**
+ * 
+ * @author harshbhavsar
+ *
+ */
+@RestController
 @RequestMapping("/send")
 public class SenderController {
 
 	@Autowired
 	private SendDataService sendDataService;
 
-	@RequestMapping(method = RequestMethod.POST)
-	@ResponseBody
+	@RequestMapping(method = RequestMethod.POST , headers = "Accept=application/json")
 	public ResponseEntity<?> upload(@RequestParam(required = true) String senderId,
 			@RequestParam(required = true) String recepientId, @RequestParam(required = true) String message) {
 
@@ -58,7 +61,6 @@ public class SenderController {
 			errors.add(new ErrorObject(HttpStatus.BAD_REQUEST.toString(), "Country or companyCode must be present."));
 			return new ResponseEntity<List<ErrorObject>>(errors, HttpStatus.BAD_REQUEST);
 		}
-
 	}
 
 }

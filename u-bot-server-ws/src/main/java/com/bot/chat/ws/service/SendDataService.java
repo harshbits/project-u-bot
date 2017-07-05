@@ -5,8 +5,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bot.chat.ws.beans.SenderData;
-import com.bot.chat.ws.config.AppProperties;
+import com.bot.chat.ws.config.AppProperties.Properties;
 
+/**
+ * Send data (sms) via RabbitMQ to u-bot
+ * 
+ * @author harshbhavsar
+ *
+ */
 @Service
 public class SendDataService{
 
@@ -14,7 +20,7 @@ public class SendDataService{
 	private RabbitTemplate rabbitTemplate;
 	
 	@Autowired
-	private AppProperties properties;
+	private Properties properties;
 	
 	public void sendDataMessage(SenderData data) {
 //		Message message = MessageBuilder.withBody(data.getMessage().getBytes()).setMessageId(data.getMessage())

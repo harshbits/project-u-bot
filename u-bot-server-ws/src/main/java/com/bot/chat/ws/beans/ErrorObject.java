@@ -9,11 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 @JsonInclude(Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ErrorObject implements Serializable {
-	
+
 	private static final long serialVersionUID = 1L;
-	
+
 	private String code;
+
 	private String message;
+
 	private String message_details;
 
 	public ErrorObject() {

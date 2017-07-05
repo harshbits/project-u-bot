@@ -26,6 +26,7 @@ import lombok.ToString;
 @JsonInclude(Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Context implements Serializable {
+	
 	private final static long serialVersionUID = 1L;
 
 	@SerializedName("name")

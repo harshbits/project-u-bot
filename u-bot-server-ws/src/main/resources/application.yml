@@ -51,6 +51,8 @@ logging:
     com.englishasl: DEBUG 
 
 app:
+  version: v1
+  
   properties:
     twilioUrl: url
     accountSid: <account-sid>
