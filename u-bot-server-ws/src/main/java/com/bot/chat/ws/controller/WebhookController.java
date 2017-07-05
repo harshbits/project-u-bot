@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.bot.chat.ws.beans.WebhookRequest;
 import com.bot.chat.ws.beans.WebhookResponse;
+import com.bot.chat.ws.constants.IntentConstant;
 import com.bot.chat.ws.service.GoogleSearchService;
 import com.bot.chat.ws.service.WeatherService;
 
@@ -53,16 +54,16 @@ public class WebhookController {
 
 		log.info("Request Action: {}", action);
 		String responseString = "";
-		switch (action) {
-		case "weather":
-			responseString = weatherService.handleRequest(request);
-			break;
-		case "web":
-			responseString = googleSearchService.handleRequest(request);
-			break;
-		default:
-			responseString = "";
-			break;
+		
+		if(action != null){
+			//For weather related intent processing
+			if(action.startsWith(IntentConstant.WEATHER_INTENT)){
+				responseString = weatherService.handleRequest(request, action);
+			}
+			//For web search related intent processing
+			else if(action.startsWith(IntentConstant.WEB_INTENT)){
+				responseString = googleSearchService.handleRequest(request);
+			}
 		}
 		log.info("Response Speech Text {}", responseString);
 		response.setSpeech(responseString);
