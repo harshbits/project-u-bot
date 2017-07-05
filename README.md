@@ -30,7 +30,7 @@ Software Dependencies:
   
   
   
-### Cloud Services (No Premium Subscription required) 
+#### Cloud Services (No Premium Subscription required) 
 
 * [![Rabbit MQ](https://www.rabbitmq.com/favicon.ico) RabbitMQ](https://www.rabbitmq.com/) - As AMQP protocol provider for messanging betweeen server and client application
 * [![Redis](https://redis.io/images/favicon.png) Redis](http://redis.io/) - To store and retrieve real time data
@@ -38,16 +38,16 @@ Software Dependencies:
 
 Hardware Dependencies:
 ----------------------
-### Raspberry Pi [![raspberry-pi-3-model-b](https://www.raspberrypi.org/app/themes/mind-control/images/favicon.png)]()
+#### Raspberry Pi [![raspberry-pi-3-model-b](https://www.raspberrypi.org/app/themes/mind-control/images/favicon.png)]()
 * [Raspberry Pi 3 model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) - As CPU for home computing system
   * It is Highly recommonded model for best performance.
   * For development/testing, you can also use [Raspberry Pi Zero W](https://www.raspberrypi.org/products/pi-zero-w/), but not for working model.
 
-### Microphone
+#### Microphone
 * [PlayStation Eye by Sony](https://www.amazon.com/gp/product/B000VTQ3LU/ref=oh_aui_detailpage_o06_s00?ie=UTF8&psc=1)
   * It works best with Raspberry Pi 3 with noise cancellation
 
-### Speaker (Bluetooth + AUX)
+#### Speaker (Bluetooth + AUX)
 * [JBL Flip 3](https://www.jbl.com/bluetooth-speakers/JBL+FLIP+III.html)
   * Note: It turned out to be cheap and best with AUX cable support
   
