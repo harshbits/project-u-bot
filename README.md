@@ -3,8 +3,7 @@
 
 The Home Computing System (Intelligent Auto-bot) project developed in Spring Boot
 
-#### Maven
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.rabbitmq/amqp-client/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.rabbitmq/amqp-client)
+Current Version: `0.0.1-SNAPSHOT`
 
 Current Support
 -------------------
