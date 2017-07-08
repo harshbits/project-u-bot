@@ -3,9 +3,19 @@
 
 The Home Computing System (Intelligent Auto-bot) project developed in Spring Boot
 
-#### Maven
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.rabbitmq/amqp-client/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.rabbitmq/amqp-client)
+Current Version: `0.0.1-SNAPSHOT`
 
+Current Support
+-------------------
+* Chat Bot
+* Weather Forecasting
+* Home Automation
+* Spotify Music 
+
+Future Enhancements
+-------------------
+* Use of [grpc-spring-boot-services](https://github.com/harshbits/grpc-spring-boot-services) for Client-Server communication
+* Congnitive Cuisuine/Recipe Support
 
 Prerequisites
 -------------
@@ -18,6 +28,7 @@ In order to start work with project, make sure you have configured IDE/System wi
 * Install Lombok for your IDE (i.e. STS or Eclipse)
 * Version to install: `1.16.16`
 * Installation Guide: [Please refer this link](http://codeomitted.com/setup-lombok-with-stseclipse-based-ide/)
+
 
 Software Dependencies
 ----------------------
