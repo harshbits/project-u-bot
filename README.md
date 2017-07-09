@@ -3,10 +3,13 @@
 
 The Home Computing System (Intelligent Auto-bot) project developed in Spring Boot
 
-Current Version: `0.0.1-SNAPSHOT`
+Version Details:
+----------------
+
+#### Current Version: `0.0.1-SNAPSHOT``
 
 Current Support
--------------------
+---------------
 * Chat Bot
 * Weather Forecasting
 * Home Automation
@@ -52,9 +55,7 @@ Software Dependencies
  
  
 
-  
-  
-  
+
 #### Cloud Services (No Premium Subscription required) 
 
 * [![Rabbit MQ](https://www.rabbitmq.com/favicon.ico) RabbitMQ](https://www.rabbitmq.com/) - As AMQP protocol provider for messanging betweeen server and client application
