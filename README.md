@@ -6,7 +6,7 @@ The Home Computing System (Intelligent Auto-bot) project developed in Spring Boo
 Version Details:
 ----------------
 
-#### Current Version: `0.0.1-SNAPSHOT``
+#### Current Version: `0.0.1-SNAPSHOT`
 
 Current Support
 ---------------
