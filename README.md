@@ -1,4 +1,4 @@
-# Project U-Bot &middot; 
+# Project U-Bot
 
 The Home Computing System (Intelligent Auto-bot) project developed in Spring Boot
 
