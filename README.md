@@ -1,8 +1,8 @@
-# Project U-Bot &middot; [![spring boot](http://spring.io/img/favicon-ca31b78daf0dd9a106bbf3c6d87d4ec7.png)](http://spring.io/)
-
+# Project U-Bot &middot; 
 
 The Home Computing System (Intelligent Auto-bot) project developed in Spring Boot
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0eaf67a1663248adb44313a5822a1791)](https://www.codacy.com/app/hbhavsar2110/project-u-bot?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=harshbits/project-u-bot&amp;utm_campaign=Badge_Grade)
 Version Details:
 ----------------
 
