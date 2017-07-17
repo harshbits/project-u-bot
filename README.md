@@ -18,10 +18,10 @@ Current Support
 
 Future Scope & Enhancements
 ---------------------------
-* Use of [grpc-spring-boot-services](https://github.com/harshbits/grpc-spring-boot-services) for Client-Server communication
+* Use of [grpc-spring-boot-services](https://github.com/harshbits/grpc-spring-boot-services) for Client-Server communication.
+* Use of [NATS](http://nats.io/) as messanging service by replacing RabbitMQ.
 * Use of [unnat-krushi-pranali](https://github.com/harshbits/unnat-krushi-pranali) for Smart Gardening
 * Congnitive Cuisuine/Recipe Support
-
 
 Prerequisites
 -------------
