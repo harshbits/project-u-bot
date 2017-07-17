@@ -18,7 +18,7 @@
 	</developers>
 
 	<parent>
-		<groupId>com.ubot.ws</groupId>
+		<groupId>com.harshbits</groupId>
 		<artifactId>project-u-bot</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
