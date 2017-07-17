@@ -1,12 +1,16 @@
-# Project U-Bot &middot; [![spring boot](http://spring.io/img/favicon-ca31b78daf0dd9a106bbf3c6d87d4ec7.png)](http://spring.io/)
-
+# Project U-Bot
 
 The Home Computing System (Intelligent Auto-bot) project developed in Spring Boot
 
-Current Version: `0.0.1-SNAPSHOT`
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0eaf67a1663248adb44313a5822a1791)](https://www.codacy.com/app/hbhavsar2110/project-u-bot?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=harshbits/project-u-bot&amp;utm_campaign=Badge_Grade)
+
+Version Details:
+----------------
+
+#### Current Version: `0.0.1-SNAPSHOT`
 
 Current Support
--------------------
+---------------
 * Chat Bot
 * Weather Forecasting
 * Home Automation
@@ -14,10 +18,10 @@ Current Support
 
 Future Scope & Enhancements
 ---------------------------
-* Use of [grpc-spring-boot-services](https://github.com/harshbits/grpc-spring-boot-services) for Client-Server communication
+* Use of [grpc-spring-boot-services](https://github.com/harshbits/grpc-spring-boot-services) for Client-Server communication.
+* Use of [NATS](http://nats.io/) as messanging service by replacing RabbitMQ.
 * Use of [unnat-krushi-pranali](https://github.com/harshbits/unnat-krushi-pranali) for Smart Gardening
 * Congnitive Cuisuine/Recipe Support
-
 
 Prerequisites
 -------------
@@ -52,9 +56,7 @@ Software Dependencies
  
  
 
-  
-  
-  
+
 #### Cloud Services (No Premium Subscription required) 
 
 * [![Rabbit MQ](https://www.rabbitmq.com/favicon.ico) RabbitMQ](https://www.rabbitmq.com/) - As AMQP protocol provider for messanging betweeen server and client application
